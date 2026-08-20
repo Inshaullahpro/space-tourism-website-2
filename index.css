@@ -1,0 +1,974 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  color: #ffffff;
+  background-color: #0b0d17;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Background Image for Home Page */
+.home-container {
+  min-height: 100vh;
+  background: url('./assets/home/background-home-desktop.jpg') no-repeat center center/cover;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 200px 150px 100px;
+}
+
+/* Navbar Styling */
+.navbar {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 55px;
+  z-index: 10;
+}
+
+.logo {
+  width: 48px;
+  height: 48px;
+}
+
+.nav-menu {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(80px);
+  padding: 30px 120px 30px 60px;
+}
+
+.nav-menu ul {
+  display: flex;
+  gap: 48px;
+  list-style: none;
+}
+
+.nav-menu a {
+  color: #ffffff;
+  text-decoration: none;
+  letter-spacing: 2.7px;
+  font-size: 16px;
+  text-transform: uppercase;
+  padding-bottom: 35px;
+}
+
+.nav-menu a span {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.nav-menu a.active {
+  border-bottom: 3px solid #ffffff;
+}
+
+/* Home Section Content */
+.home-text {
+  max-width: 450px;
+}
+
+.home-text h5 {
+  font-size: 28px;
+  color: #d0d6f9;
+  letter-spacing: 4.75px;
+  margin-bottom: 24px;
+}
+
+.home-text h1 {
+  font-size: 140px;
+  font-weight: 400;
+  margin-bottom: 24px;
+}
+
+.home-text p {
+  color: #d0d6f9;
+  line-height: 1.8;
+  font-size: 18px;
+}
+
+/* Explore Button */
+.explore-btn {
+  width: 274px;
+  height: 274px;
+  border-radius: 50%;
+  border: none;
+  background-color: #ffffff;
+  color: #0b0d17;
+  font-size: 32px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: outline 0.3s ease;
+}
+
+.explore-btn:hover {
+  outline: 80px solid rgba(255, 255, 255, 0.1);
+}
+
+
+
+
+/* Destination Section */
+.destination-container {
+  min-height: 100vh;
+  background: url('/assets/destination/background-destination-desktop.jpg') no-repeat center center/cover;
+  padding: 180px 150px 80px;
+}
+
+.page-title {
+  font-size: 28px;
+  letter-spacing: 4.75px;
+  text-transform: uppercase;
+  margin-bottom: 60px;
+}
+
+.page-title span {
+  opacity: 0.25;
+  font-weight: bold;
+  margin-right: 20px;
+}
+
+.destination-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 80px;
+}
+
+.planet-image img {
+  width: 445px;
+  height: 445px;
+}
+
+.planet-details {
+  max-width: 445px;
+}
+
+.tab-list {
+  display: flex;
+  gap: 35px;
+  list-style: none;
+  margin-bottom: 30px;
+}
+
+.tab-list li {
+  letter-spacing: 2.7px;
+  text-transform: uppercase;
+  color: #d0d6f9;
+  cursor: pointer;
+  padding-bottom: 12px;
+  border-bottom: 3px solid transparent;
+}
+
+.tab-list li.active-tab {
+  color: #ffffff;
+  border-bottom-color: #ffffff;
+}
+
+.planet-details h2 {
+  font-size: 100px;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.planet-details .description {
+  color: #d0d6f9;
+  line-height: 1.8;
+  font-size: 18px;
+  margin-bottom: 50px;
+}
+
+.divider {
+  height: 1px;
+  background-color: #383b4b;
+  margin-bottom: 28px;
+}
+
+.stats {
+  display: flex;
+  gap: 80px;
+}
+
+.stat-title {
+  font-size: 14px;
+  color: #d0d6f9;
+  letter-spacing: 2.35px;
+  margin-bottom: 12px;
+}
+
+.stat-value {
+  font-size: 28px;
+  text-transform: uppercase;
+}
+
+
+
+
+/* Crew Section */
+.crew-container {
+  min-height: 100vh;
+  background: url('/assets/crew/background-crew-desktop.jpg') no-repeat center center/cover;
+  padding: 180px 150px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.crew-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.crew-details {
+  max-width: 500px;
+}
+
+.crew-role {
+  font-size: 32px;
+  text-transform: uppercase;
+  opacity: 0.5;
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+
+.crew-name {
+  font-size: 56px;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin-bottom: 25px;
+}
+
+.crew-bio {
+  color: #d0d6f9;
+  line-height: 1.8;
+  font-size: 18px;
+  margin-bottom: 80px;
+}
+
+.crew-dots {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.crew-dots .dot {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  opacity: 0.17;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.crew-dots .dot:hover {
+  opacity: 0.5;
+}
+
+.crew-dots .dot.active {
+  opacity: 1;
+}
+
+.crew-image img {
+  max-height: 550px;
+  display: block;
+}
+
+
+
+
+
+/* Technology Section */
+/* Technology Section - Refined for Precise Desktop Design */
+
+.tech-container {
+  min-height: 100vh;
+  /* Precisely matches image_10.png background style */
+  background: radial-gradient(circle at center, #1b213a 0%, #0b0d17 100%);
+  color: #FFFFFF;
+  padding: 160px 0 60px 165px; /* Precision padding matching line placement */
+  position: relative;
+  overflow: hidden;
+}
+
+/* Page Title Precision */
+.page-title {
+  font-family: 'Barlow Condensed', sans-serif; /* Assumed font family for labels */
+  font-size: 28px;
+  font-weight: 400;
+  letter-spacing: 4.75px;
+  text-transform: uppercase;
+  margin-bottom: 70px;
+  position: absolute;
+  top: 180px;
+  left: 165px;
+}
+
+.page-title span {
+  opacity: 0.25;
+  font-weight: 700;
+  margin-right: 25px;
+}
+
+/* Updated Layout Container */
+.tech-content-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 160px; /* Spacer from absolute page title */
+  gap: 0;
+}
+
+/* Left side group: Nav + Text */
+.tech-info-section {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  width: 55%;
+}
+
+/* Number Tabs - Fixed Position Left */
+.tech-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+/* Circular Buttons */
+.tech-btn {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: transparent;
+  color: #FFFFFF;
+  font-family: 'Bellefair', serif; /* Font precision for numbers */
+  font-size: 32px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+.tech-btn:hover {
+  border-color: rgba(255, 255, 255, 1);
+}
+
+.tech-btn.active {
+  background-color: #FFFFFF;
+  color: #0b0d17;
+  border-color: #FFFFFF;
+}
+
+/* Details Section */
+.tech-details {
+  flex: 1;
+  max-width: 445px;
+}
+
+/* Terminology label - Smaller, subtle */
+.tech-subheading {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 2.7px;
+  color: #D0D6F9;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 12px;
+}
+
+/* Main Title - Bellefair font, specific scale */
+.tech-name {
+  font-family: 'Bellefair', serif;
+  font-size: 56px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin-bottom: 25px;
+  line-height: 1.1;
+}
+
+/* Paragraph - Specific spacing and line height */
+.tech-description {
+  font-family: 'Barlow', sans-serif; /* assumed body font */
+  color: #D0D6F9;
+  line-height: 1.8;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+/* Right Side Image Precision */
+.tech-image-container {
+  width: 45%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Keep portrait aspect, precise crop */
+.tech-main-image {
+  max-width: 515px;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 515 / 527; /* matched portrait aspect ratio from Figma */
+  object-fit: cover;
+  display: block;
+}
+
+
+
+
+
+
+/* Navbar Line */
+.nav-line {
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.25);
+  width: 35%;
+  position: absolute;
+  left: 167px;
+  z-index: 20;
+}
+
+.mobile-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 30;
+}
+
+/* TABLET DESIGN (768px) */
+@media (max-width: 768px) {
+  .nav-line { display: none; }
+  
+  .navbar { top: 0; padding-left: 40px; }
+  .nav-menu { padding: 30px 40px; }
+  .nav-menu ul { gap: 37px; }
+  .nav-menu a span { display: none; }
+
+  .home-container {
+    flex-direction: column;
+    text-align: center;
+    padding: 160px 40px 60px;
+    justify-content: center;
+  }
+  .home-text h1 { font-size: 150px; }
+
+  .destination-container, .crew-container, .tech-container {
+    padding: 140px 40px 60px;
+    text-align: center;
+  }
+  
+  .destination-content, .crew-content, .tech-content {
+    flex-direction: column;
+  }
+
+  .tech-content { flex-direction: column; }
+  .tech-nav { flex-direction: row; }
+  .tech-image img { width: 100vw; margin-left: -40px; }
+}
+
+/* MOBILE DESIGN (480px) */
+@media (max-width: 480px) {
+  .mobile-toggle { display: block; position: absolute; right: 24px; top: 33px; }
+  
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100vh;
+    flex-direction: column;
+    padding: 120px 32px;
+    transition: right 0.3s ease;
+  }
+  .nav-menu.open { right: 0; }
+  .nav-menu ul { flex-direction: column; gap: 32px; }
+  .nav-menu a span { display: inline-block; }
+
+  .home-text h1 { font-size: 80px; }
+  .explore-btn { width: 150px; height: 150px; font-size: 20px; }
+}
+
+
+
+
+
+
+
+/* Bottom Design Switcher Toolbar */
+.design-toolbar {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  padding: 10px 20px;
+  border-radius: 30px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  z-index: 1000;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.design-toolbar button {
+  background: #E5E7EB;
+  color: #374151;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  font-style: italic;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.design-toolbar button:hover {
+  background: #D1D5DB;
+}
+
+.design-toolbar button.active {
+  background: #2563EB;
+  color: #FFFFFF;
+  border: 2px dashed #93C5FD;
+}
+
+/* Simulated Screen Frames for Preview */
+.app-container {
+  transition: all 0.4s ease;
+  margin: 0 auto;
+}
+
+.app-container.tablet {
+  max-width: 768px;
+  border: 4px solid #333;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-top: 20px;
+  margin-bottom: 100px;
+}
+
+.app-container.mobile {
+  max-width: 375px;
+  border: 4px solid #333;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-top: 20px;
+  margin-bottom: 100px;
+}
+
+
+
+/* Container Modes Fix */
+.app-container {
+  min-height: 100vh;
+  transition: all 0.3s ease;
+  background-color: #0b0d17;
+}
+
+/* Tablet Preview Frame */
+.app-container.tablet {
+  max-width: 768px !important;
+  margin: 20px auto 120px auto;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  overflow-y: auto;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+}
+
+/* Mobile Preview Frame */
+.app-container.mobile {
+  max-width: 375px !important;
+  margin: 20px auto 120px auto;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 24px;
+  overflow-y: auto;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+}
+
+/* Preview Frame Responsive Adjustments */
+.app-container.tablet .tech-container,
+.app-container.mobile .tech-container {
+  padding: 120px 0 60px 0;
+  text-align: center;
+}
+
+.app-container.tablet .tech-container .page-title,
+.app-container.mobile .tech-container .page-title {
+  position: static;
+  margin-bottom: 30px;
+  padding-left: 24px;
+  text-align: left;
+}
+
+.app-container.tablet .tech-content-wrapper,
+.app-container.mobile .tech-content-wrapper {
+  flex-direction: column-reverse;
+  margin-top: 20px;
+  gap: 30px;
+}
+
+.app-container.tablet .tech-info-section,
+.app-container.mobile .tech-info-section {
+  flex-direction: column;
+  width: 100%;
+  padding: 0 24px;
+  gap: 30px;
+}
+
+.app-container.tablet .tech-nav,
+.app-container.mobile .tech-nav {
+  flex-direction: row;
+  justify-content: center;
+}
+
+.app-container.tablet .tech-btn,
+.app-container.mobile .tech-btn {
+  width: 60px;
+  height: 60px;
+  font-size: 24px;
+}
+
+.app-container.mobile .tech-btn {
+  width: 40px;
+  height: 40px;
+  font-size: 16px;
+}
+
+.app-container.tablet .tech-image-container,
+.app-container.mobile .tech-image-container {
+  width: 100%;
+}
+
+.app-container.tablet .tech-main-image,
+.app-container.mobile .tech-main-image {
+  max-width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+/* Actual Device Screen Media Query */
+@media (max-width: 1024px) {
+  .tech-container {
+    padding: 120px 0 60px 0;
+    text-align: center;
+  }
+
+  .tech-container .page-title {
+    position: static;
+    margin-bottom: 30px;
+    padding-left: 24px;
+    text-align: left;
+  }
+
+  .tech-content-wrapper {
+    flex-direction: column-reverse;
+    margin-top: 20px;
+    gap: 30px;
+  }
+
+  .tech-info-section {
+    flex-direction: column;
+    width: 100%;
+    padding: 0 24px;
+    gap: 30px;
+  }
+
+  .tech-nav {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .tech-btn {
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+  }
+
+  .tech-image-container {
+    width: 100%;
+  }
+
+  .tech-main-image {
+    max-width: 100%;
+    height: 300px;
+    object-fit: cover;
+  }
+}
+
+
+
+
+
+
+/* 4 Screens Grid View for Tablet Design */
+.tablet-grid-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding: 40px 20px 120px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #0b0d17;
+  min-height: 100vh;
+}
+
+.tablet-card {
+  position: relative;
+  height: 450px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  background: #0b0d17;
+}
+
+.screen-content {
+  width: 1280px; /* Original screen size */
+  height: 800px;
+  transform: scale(0.38); /* Scaled down to fit into card */
+  transform-origin: top left;
+  pointer-events: none; /* Disables inner clicks just like Figma preview */
+}
+
+
+
+
+
+/* Toolbar High Priority Z-Index */
+.design-toolbar {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #E5E7EB;
+  padding: 10px 16px;
+  border-radius: 30px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+  z-index: 999999 !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  pointer-events: auto !important;
+}
+
+.design-toolbar button {
+  background: #D1D5DB;
+  color: #374151;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+  font-style: italic;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.design-toolbar button.active {
+  background: #2563EB;
+  color: #FFFFFF;
+  border: 2px dashed #93C5FD;
+}
+
+/* Tablet Board Scale Fix - Text Clear Visibility */
+.tablet-card .screen-content {
+  width: 1280px;
+  height: 800px;
+  transform: scale(0.38);
+  transform-origin: top left;
+  opacity: 1;
+}
+
+/* Mobile Frame Fix */
+.app-container.mobile {
+  background-color: #0b0d17;
+  min-height: 100vh;
+  padding-bottom: 100px;
+}
+
+.app-container.mobile .main-viewport {
+  max-width: 375px;
+  margin: 20px auto;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.8);
+}
+
+
+
+
+
+
+
+
+
+/* Board Views Full Width Reset */
+.app-container.tablet,
+.app-container.mobile {
+  max-width: 100% !important;
+  width: 100%;
+  margin: 0 !important;
+  border: none !important;
+  box-shadow: none !important;
+  overflow-x: auto;
+  background-color: #0b0d17;
+}
+
+/* Mobile Overlapping Board Wrapper */
+.mobile-board-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1100px;
+  height: 750px;
+  margin: 40px auto 120px auto;
+  background-color: #0b0d17;
+}
+
+.mobile-card {
+  position: absolute;
+  width: 320px;
+  height: 600px;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: -15px 20px 40px rgba(0, 0, 0, 0.8);
+  background: #0b0d17;
+}
+
+/* Internal Mobile View Scale */
+.mobile-screen-content {
+  width: 375px;
+  height: 667px;
+  transform: scale(0.85);
+  transform-origin: top left;
+  pointer-events: none;
+}
+
+/* Cards Overlap Staggering (Matching Design Screenshot) */
+.mobile-card.card-1 {
+  top: 10px;
+  left: 30px;
+  z-index: 4;
+}
+
+.mobile-card.card-2 {
+  top: 140px;
+  left: 210px;
+  z-index: 2;
+}
+
+.mobile-card.card-3 {
+  top: 10px;
+  left: 450px;
+  z-index: 3;
+}
+
+.mobile-card.card-4 {
+  top: 120px;
+  left: 670px;
+  z-index: 1;
+}
+
+
+
+
+
+
+
+/* Mobile Design Showcase Board (Exact Figma Presentation Style) */
+.design-board-wrapper {
+  width: 100%;
+  min-height: calc(100vh - 80px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0b0d17;
+  padding: 20px 20px 120px 20px;
+}
+
+/* Light Background Board Container */
+.design-board {
+  position: relative;
+  width: 860px;
+  height: 540px;
+  background: #f3f4f6;
+  border-radius: 24px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Internal Card Canvas */
+.cards-canvas {
+  position: relative;
+  width: 760px;
+  height: 480px;
+}
+
+/* Card Outer Frame */
+.board-card {
+  position: absolute;
+  width: 255px;
+  height: 380px;
+  background: #0b0d17;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: -10px 15px 30px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Mobile Screen Internal Scale & Ratio */
+.board-card .scaled-content {
+  width: 375px;
+  height: 667px;
+  transform: scale(0.57);
+  transform-origin: top left;
+  pointer-events: none;
+}
+
+/* Staggered Coordinates with Proper Spacing & Layering */
+.board-card.card-home {
+  top: 0px;
+  left: 20px;
+  z-index: 4;
+}
+
+.board-card.card-destination {
+  top: 90px;
+  left: 180px;
+  z-index: 2;
+}
+
+.board-card.card-crew {
+  top: 0px;
+  left: 340px;
+  z-index: 3;
+}
+
+.board-card.card-tech {
+  top: 90px;
+  left: 490px;
+  z-index: 1;
+}
